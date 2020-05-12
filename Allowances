@@ -1,0 +1,56 @@
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+@Entity(tableName = "Allowance")
+public class Book {
+    @PrimaryKey(autoGenerate = true)
+    @NonNull
+    @ColumnInfo(name = "Allowance")
+    private int mId;
+    @Nullable
+    @ColumnInfo(name = "AllowanceName")
+    private String mName;
+    public int getId() {
+        return mId;
+    }
+    public void setId(@NonNull int id) {
+        mId = id;
+    }
+    public String getName() {
+        return mName;
+    }
+    public void setId(@Nullable String name) {
+        mName = name;
+    }
+    public String getImportance() {
+        return mImportance;
+    }
+    public void setName(String importance) {
+        mImportance = importance;
+    }
+    public String getCreationDate() {
+        return mCreationDate;
+    }
+    public void getCreationDate(String creationDate) {
+        mCreationDate = creationDate;
+    }  
+    private String mImportance;
+    private String mCreationDate;
+    public int getValue() {
+        return mValue;
+    }
+    public void setValue(Double value) {
+        mValue = value;
+    }
+    private Double mValue;
+    public Allowances(int id, String creationDate,String name, String Importance, Double Value) {
+        super();      
+        mId = id;
+        mCreationDate = creationdate;
+        mName = name;
+        mImportance = importance;
+        mValue = value; 
+    }
+}
