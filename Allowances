@@ -38,7 +38,7 @@ public class Book {
     }  
     private String mImportance;
     private String mCreationDate;
-    public int getValue() {
+    public double getValue() {
         return mValue;
     }
     public void setValue(Double value) {
