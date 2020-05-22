@@ -3,8 +3,8 @@ import androidx.annotation.Nullable;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-@Entity(tableName = "Allowance")
-public class Book {
+@Entity(tableName = "allowances")
+public class Allowance {
     @PrimaryKey(autoGenerate = true)
     @NonNull
     @ColumnInfo(name = "Allowance")
@@ -38,17 +38,17 @@ public class Book {
     }  
     private String mImportance;
     private String mCreationDate;
-    public int getValue() {
+    public Double getValue() {
         return mValue;
     }
     public void setValue(Double value) {
         mValue = value;
     }
     private Double mValue;
-    public Allowances(int id, String creationDate,String name, String Importance, Double Value) {
+    public Allowance(int id, String creationDate,String name, String importance, double value) {
         super();      
         mId = id;
-        mCreationDate = creationdate;
+        mCreationDate = creationDate;
         mName = name;
         mImportance = importance;
         mValue = value; 
